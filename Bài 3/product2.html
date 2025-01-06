@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<header>
+    <div class="logo">Clothing Store</div>
+    <nav>
+        <ul>
+            <li><a href="bai3.html">Trang chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">🛒 Giỏ hàng</a></li>
+        </ul>
+    </nav>
+</header>
+    <style>
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .product-image {
+            float: left;
+            width: 40%;
+        }
+        .product-details {
+            float: right;
+            width: 55%;
+        }
+        .product-details h2 {
+            margin-top: 0;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-content clearfix">
+        <div class="product-image">
+            <img src="ảnh/quanao.jpg" alt="Quần Áo" style="width:100%;">
+        </div>
+        <div class="product-details">
+            <h2>Quần Áo</h2>
+            <p>Mô tả sản phẩm Quần Áo. Đây là một sản phẩm tuyệt vời với nhiều tính năng nổi bật.</p>
+            <ul>
+                <li>Tính năng 1</li>
+                <li>Tính năng 2</li>
+                <li>Tính năng 3</li>
+            </ul>
+            <p>Giá: 1,000,000 VND</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartButton = document.createElement('button');
+            cartButton.textContent = 'Thêm vào giỏ hàng';
+            cartButton.style.display = 'block';
+            cartButton.style.marginTop = '20px';
+            cartButton.style.padding = '10px 20px';
+            cartButton.style.backgroundColor = '#28a745';
+            cartButton.style.color = '#fff';
+            cartButton.style.border = 'none';
+            cartButton.style.borderRadius = '5px';
+            cartButton.style.cursor = 'pointer';
+            cartButton.style.fontSize = '16px';
+
+            cartButton.addEventListener('mouseover', function() {
+                cartButton.style.backgroundColor = '#218838';
+            });
+
+            cartButton.addEventListener('mouseout', function() {
+                cartButton.style.backgroundColor = '#28a745';
+            });
+
+            cartButton.addEventListener('click', function() {
+                alert('Sản phẩm đã được thêm vào giỏ hàng!');
+            });
+
+            document.querySelector('.product-details').appendChild(cartButton);
+        });
+    </script>
+</body>
+<footer>
+    <div class="container">
+        <div class="section">
+            <h4>Về Chúng Tôi</h4>
+            <p>Thông tin công ty CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI TUẤN TRANG</p>
+            <p>Giấy chứng nhận đăng ký kinh doanh số 0106062077 do Sở kế hoạch và đầu tư Thành phố Hà Nội cấp ngày 17/12/2012</p>
+        </div>
+        <div class="section">
+            <h4>Liên Hệ</h4>
+            <p>Điện thoại: 0972.359.6669</p>
+            <p>Email: thoitrangorchid@gmail.com</p>
+            <p>Địa chỉ: Số 147 đường Thanh Lâm, Phường Phú Lãm, Quận Hà Đông, Thành phố Hà Nội, Việt Nam</p>
+        </div>
+        <div class="section">
+            <h4>Chính Sách</h4>
+            <a href="#">Chính sách bảo mật</a><br>
+            <a href="#">Chính sách đổi trả</a><br>
+            <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <div class="section">
+            <h4>Mạng Xã Hội</h4>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">YouTube</a>
+        </div>
+    </div>
+    <div class="subscribe">
+        <h4>Đăng Ký Để Nhận Ưu Đãi</h4>
+        <p>Đăng ký ngay để nhận thêm ưu đãi mới nhất</p>
+        <form>
+            <input type="email" placeholder="Nhập email của bạn" required>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+    <p class="copyright">© 2025 Bản quyền Orchid Việt Nam</p>
+</footer>
+</html>
